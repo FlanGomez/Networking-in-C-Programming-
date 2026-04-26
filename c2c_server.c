@@ -16,7 +16,7 @@ pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
 
 void *handle(void *ID){  // This functions doesnt know the TYPE it is kept as void(But we can assign a type like int etc)
-    int client = *(int *)ID; // now client is holding the ID
+    int client = *(int *)ID; // pointer casting used where integer datatype assigned to ID
     free(ID);
     char message[1024];
 
